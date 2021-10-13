@@ -32,7 +32,7 @@ while True:
             print(f"{a}/{b} is an improper fraction.")
             x = math.gcd(a,b)
             int(x)
-            if x != 1:     
+            if x != 1 and b != 1:     
                 m = a / x
                 n = b / x
                 m = int(m)
@@ -40,13 +40,16 @@ while True:
                 print(f"This improper fraction can be reduced to: {m}/{n}")
                 p = m // n
                 o = m % n
-                print(f"The mixed number is {p} and {o}/{n}")
-                break
+                if o != 0:
+                    print(f"The mixed number is {p} and {o}/{n}")
+                    break
+                else:
+                    print(f"The whole number is {p}")
+                    break
             else:
                 print("This improper fraction cannot be reduced any further.")
                 p = a // b
                 o = a % b
-                print(o)
                 if o != 0:
                     print(f"The mixed number is {p} and {o}/{b}")
                     break
