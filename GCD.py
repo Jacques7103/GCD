@@ -46,7 +46,8 @@ while True:
                 print("This improper fraction cannot be reduced any further.")
                 p = a // b
                 o = a % b
-                if o > 0:
+                print(o)
+                if o != 0:
                     print(f"The mixed number is {p} and {o}/{b}")
                     break
                 else:
